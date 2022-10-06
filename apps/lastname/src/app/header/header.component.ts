@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'last-header',
@@ -6,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  constructor( private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
+  Hello(){
+
+    // @ts-ignore
+    this.router.navigate(['movie-search'], { relativeTo: this.router });
+
+  }
 }
