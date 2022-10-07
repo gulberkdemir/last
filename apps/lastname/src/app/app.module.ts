@@ -7,7 +7,9 @@ import { MatSliderModule } from '@angular/material/slider';
 import { HeaderComponent } from './header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MovieSearchPageComponent } from './movie-search-page/movie-search-page.component';
-import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +17,16 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
     NxWelcomeComponent,
     HeaderComponent,
     MovieSearchPageComponent,
+    HomePageComponent,
   ],
-  imports: [BrowserModule, MatIconModule, RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [
+    BrowserModule,
+    MatIconModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

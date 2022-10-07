@@ -26,7 +26,15 @@
 
 a {
   color: white;
+  border: none !important;
+  text-decoration: none;
 }
+a:hover{
+  color: #dc4666;
+
+}
+
+
 
 span{
 font-size: 24px;

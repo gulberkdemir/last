@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   Hello(){
 
     // @ts-ignore
-    this.router.navigate(['movie-search'], { relativeTo: this.router });
+    // this.router.navigate(['/movie-search']);
 
   }
 }
