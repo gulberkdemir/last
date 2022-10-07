@@ -11,13 +11,20 @@ import {nowPLaying} from "./nowPlaying.model";
 export class HomePageComponent implements OnInit {
   nowPlayingSubscription: Subscription;
   nowPLayingList : nowPLaying[];
+  concatSrc: string;
 
-  constructor(private homepageservice : HomePageServiceService) {}
+  constructor(private homePageService : HomePageServiceService) {}
 
   ngOnInit(): void {
-    this.nowPlayingSubscription = this.homepageservice.getNowPlaying().subscribe(res => {
+    this.nowPlayingSubscription = this.homePageService.getNowPlaying().subscribe(res => {
        this.nowPLayingList = res.results;
-       console.log(this.nowPLayingList)
+
     })
+  }
+
+  concatSrcFunction(i: number) {
+    this.concatSrc = `https://image.tmdb.org/t/p/original${this.nowPLayingList[i].backdrop_path}`
+    return this.concatSrc
+
   }
 }
