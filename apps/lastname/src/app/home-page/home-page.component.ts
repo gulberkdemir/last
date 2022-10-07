@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {HomePageServiceService} from "./home-page-service.service";
+import {Subscription} from "rxjs";
+import {nowPLaying} from "./nowPlaying.model";
 
 @Component({
   selector: 'last-home-page',
@@ -6,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent implements OnInit {
-  constructor() {}
+  nowPlayingSubscription: Subscription;
+  nowPLayingList : nowPLaying[];
 
-  ngOnInit(): void {}
+  constructor(private homepageservice : HomePageServiceService) {}
+
+  ngOnInit(): void {
+    this.nowPlayingSubscription = this.homepageservice.getNowPlaying().subscribe(res => {
+       this.nowPLayingList = res.results;
+       console.log(this.nowPLayingList)
+    })
+  }
 }

@@ -10,6 +10,7 @@ import { MovieSearchPageComponent } from './movie-search-page/movie-search-page.
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     RouterLink,
     RouterLinkActive,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
