@@ -11,7 +11,7 @@ import {HomePageComponent} from "./home-page/home-page.component";
 
 // @ts-ignore
 const APP_ROUTER: Routes = [
-  { path: '', redirectTo:'/', pathMatch:'full' },
+  { path: '', redirectTo:'/home', pathMatch:'full' },
   { path: 'movie-search', component: MovieSearchPageComponent },
   { path: 'home', component:HomePageComponent },
   // {path: '**', redirectTo: '/not-found' },
