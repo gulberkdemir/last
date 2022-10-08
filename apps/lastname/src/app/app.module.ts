@@ -11,6 +11,14 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import {HttpClientModule} from "@angular/common/http";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatCardModule} from "@angular/material/card";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {FormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -27,7 +35,15 @@ import {HttpClientModule} from "@angular/common/http";
     RouterLink,
     RouterLinkActive,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatGridListModule,
+    MatProgressSpinnerModule,
+    FormsModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
