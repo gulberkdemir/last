@@ -10,6 +10,19 @@
   </div>
 
   <div class="container">
+
+<!--    <mat-card  *ngFor="let movie of Movies.results" class="example-card" routerLink="/movie-details/{{movie.id}}">-->
+<!--      <mat-card-title-group>-->
+<!--        <mat-card-title>{{movie.title}}</mat-card-title>-->
+<!--        <mat-card-subtitle>Extra large</mat-card-subtitle>-->
+<!--        <img mat-card-xl-image src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" >-->
+<!--      </mat-card-title-group>-->
+<!--      <mat-card-content>-->
+<!--        {{movie.overview}}-->
+<!--      </mat-card-content>-->
+<!--    </mat-card>-->
+
+
     <mat-card *ngFor="let movie of Movies.results" style="padding: 0; height: 280px" routerLink="/movie-details/{{movie.id}}">
       <mat-grid-list cols="5" rowHeight="280px" class="fade-in">
         <mat-grid-tile colspan="2">
@@ -36,12 +49,14 @@
               {{movie.overview}}
             </div>
           </mat-card-content>
-          <div class="more-info">
-            <a mat-button routerLink="/movie-details/{{movie.id}}">More info</a>
-          </div>
+<!--          <div class="more-info">-->
+<!--            <a mat-button routerLink="/movie-details/{{movie.id}}">More info</a>-->
+<!--          </div>-->
         </mat-grid-tile>
       </mat-grid-list>
     </mat-card>
+
+
     <mat-card *ngIf="noResult">
       <mat-card-content>
         <mat-card-header>
