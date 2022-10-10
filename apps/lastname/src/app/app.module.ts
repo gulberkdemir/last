@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { DetailsComponentComponent } from './details-component/details-component.component';
 import {MatChipsModule} from "@angular/material/chips";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import {MatChipsModule} from "@angular/material/chips";
     BrowserAnimationsModule,
     MatButtonModule,
     MatChipsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],

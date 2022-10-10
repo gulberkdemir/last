@@ -1,5 +1,5 @@
 .custom_bg {
-  background-image: radial-gradient(circle at 20% 50%, rgba(19.61%, 7.84%, 7.84%, 0.98) 0%, rgba(27.45%, 13.73%, 13.73%, 0.88) 100%);
+
 }
 
 
@@ -18,7 +18,7 @@
 .details-container {
   margin: 0 auto;
   padding-top: 20px;
-  width: 1000px;
+  width: 100%;
   background: transparent;
   z-index: 0;
 }
@@ -44,7 +44,7 @@
   }
 
 .movie-title {
-  margin: 0;
+  //margin: 0;
 }
 
 .movie-actions {
@@ -81,9 +81,9 @@
 
 .movie-actions li.chart {
   background: transparent;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   box-sizing: border-box;
   height: 68px;
 }
@@ -150,8 +150,12 @@ ol.people {
       line-height: 1.6em;
       margin: 0;
       padding: 0;
-      overflow: hidden;
       text-overflow: ellipsis;
+      overflow: hidden;
+      width: 100%;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
     }
 
     p.character {
@@ -169,3 +173,27 @@ ol.people {
   h3 {
     margin-right: 18px;
   }
+
+mat-card-title{
+  margin-top: 2rem;
+}
+
+mat-card-content{
+  margin-bottom:0;
+}
+
+i{
+  position: relative;
+  left: 14px;
+  top: 12px;
+}
+
+
+mat-grid-list div mat-grid-tile:nth-child(2) .mat-grid-tile-content{
+  padding:10px;
+  justify-content: space-between;
+}
+
+mat-grid-tile mat-card-content mat-card-title h2{
+  margin-bottom: 2rem;
+}

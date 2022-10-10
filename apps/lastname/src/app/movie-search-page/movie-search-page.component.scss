@@ -85,6 +85,10 @@ mat-card{
   cursor: pointer;
 }
 
+mat-card:hover{
+  background-color:#dc4666;
+}
+
 .star{
   position: relative;
   left: 5px;
