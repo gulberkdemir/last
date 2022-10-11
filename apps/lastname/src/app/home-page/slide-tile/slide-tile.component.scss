@@ -1,6 +1,7 @@
+@import '../../../variable';
 .slide-container{
-  width: 60%;
-  height: 50%;
+  width: $slide-width;
+  height: $slide-height;
   margin: auto;
   background-color:black;
 }
