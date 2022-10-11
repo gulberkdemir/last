@@ -23,6 +23,7 @@ import { DetailsComponentComponent } from './details-component/details-component
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ResultTileComponent } from './movie-search-page/result-tile/result-tile.component';
+import { SlideTileComponent } from './home-page/slide-tile/slide-tile.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ResultTileComponent } from './movie-search-page/result-tile/result-tile
     HomePageComponent,
     DetailsComponentComponent,
     ResultTileComponent,
+    SlideTileComponent,
   ],
   imports: [
     BrowserModule,
