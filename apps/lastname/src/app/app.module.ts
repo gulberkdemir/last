@@ -20,8 +20,9 @@ import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { DetailsComponentComponent } from './details-component/details-component.component';
-import {MatChipsModule} from "@angular/material/chips";
-import {MatDialogModule} from "@angular/material/dialog";
+import { MatChipsModule } from '@angular/material/chips';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ResultTileComponent } from './movie-search-page/result-tile/result-tile.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     MovieSearchPageComponent,
     HomePageComponent,
     DetailsComponentComponent,
+    ResultTileComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     BrowserAnimationsModule,
     MatButtonModule,
     MatChipsModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

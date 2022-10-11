@@ -2,22 +2,11 @@
   <h1 class="now-playing-title">Now Playing</h1>
 <div class="slide-container">
   <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-<!--    <div class="carousel-indicators">-->
-<!--      <button type="button" data-bs-target="#carouselExampleDark" data-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
-<!--      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
-<!--      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
-<!--    </div>-->
 
 
-
-<!--    <div *ngFor="let item  of nowPLayingList, let i = index" class="carousel-indicators">-->
-<!--      <button type="button" attr.data-bs-target="#carouselExampleDark" attr.data-slide-to="{{0}}" [ngClass]="{'active': i ===0}" attr.aria-current="true" attr.aria-label="{{item.title}}"></button>-->
-<!--&lt;!&ndash;      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>&ndash;&gt;-->
-<!--&lt;!&ndash;      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>&ndash;&gt;-->
-<!--    </div>-->
 
     <div class="carousel-inner">
-      <div class="carousel-item" *ngFor="let item of nowPLayingList;let i = index;let isFirst = first"  [ngClass]="{'active' :isFirst}" [attr.data-bs-interval]="4000"
+      <div class="carousel-item" *ngFor="let item of nowPLayingList;let i = index;let isFirst = first"  [ngClass]="{'active' :isFirst}" [attr.data-bs-interval]="3000"
            routerLink="/movie-details/{{item.id}}">
         <img [src]="concatSrcFunction(i)" class="d-block w-100" alt="{{item.title}}">
         <div class="carousel-caption d-none d-md-block">
@@ -39,27 +28,4 @@
 </div>
 
 
-
-<!--<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">-->
-<!--  <ol class="carousel-indicators">-->
-<!--    <li data-target="#carouselExampleCaptions"  *ngFor="let item of nowPLayingList;let i = index" [attr.data-slide-to]="i"></li>-->
-<!--  </ol>-->
-<!--  <div class="carousel-inner">-->
-<!--    <div class="carousel-item" *ngFor="let item of nowPLayingList;let i = index;let isFirst = first" [ngClass]="{'active' :isFirst}">-->
-<!--      <img [src]="'https://image.tmdb.org/t/p/w500{{item.poster_path}}'" class="d-block w-100" [alt]="item.title">-->
-<!--      <div class="carousel-caption d-none d-md-block">-->
-<!--        <h5 [textContent]="item.title"></h5>-->
-<!--        <p [textContent]="item.title"></p>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">-->
-<!--    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--    <span class="sr-only">Previous</span>-->
-<!--  </a>-->
-<!--  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">-->
-<!--    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--    <span class="sr-only">Next</span>-->
-<!--  </a>-->
-<!--</div>-->
 </div>
