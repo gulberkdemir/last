@@ -23,3 +23,9 @@
   cursor: pointer;
 }
 
+.now-playing-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor:inherit;
+}
