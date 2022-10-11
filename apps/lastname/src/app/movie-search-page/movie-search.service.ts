@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {catchError, Observable, retry, throwError} from "rxjs";
 import {movieApiConfig} from "../movie-config";
 import {HttpClient} from "@angular/common/http";
-import {topRated} from "./top-rated.model";
+
 
 
 

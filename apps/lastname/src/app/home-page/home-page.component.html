@@ -1,14 +1,13 @@
 <div class="container">
+
+
   <h1 class="now-playing-title">Now Playing</h1>
 <div class="slide-container">
   <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-
-
-
     <div class="carousel-inner">
       <div class="carousel-item" *ngFor="let item of nowPLayingList;let i = index;let isFirst = first"  [ngClass]="{'active' :isFirst}" [attr.data-bs-interval]="3000"
            routerLink="/movie-details/{{item.id}}">
-        <img [src]="concatSrcFunction(i)" class="d-block w-100" alt="{{item.title}}">
+        <img [src]="concatSrcFunction(i, item.backdrop_path)" class="d-block w-100" alt="{{item.title}}">
         <div class="carousel-caption d-none d-md-block">
           <h5>{{item.title}}</h5>
           <p>{{item.overview}}</p>
@@ -27,5 +26,35 @@
 
 </div>
 
+
+
+
+  <h1 class="now-playing-title">Popular Movies</h1>
+  <div class="slide-container">
+    <div id="carouselExampleDark2" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+
+
+      <div class="carousel-inner">
+        <div class="carousel-item" *ngFor="let itemtwo of PopularList;let i = index;let isFirst = first"  [ngClass]="{'active' :isFirst}" [attr.data-bs-interval]="3000"
+             routerLink="/movie-details/{{itemtwo.id}}">
+          <img [src]="concatSrcFunction(i, itemtwo.backdrop_path)" class="d-block w-100" alt="{{itemtwo.title}}">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{itemtwo.title}}</h5>
+            <p>{{itemtwo.overview}}</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </div>
 
 </div>
